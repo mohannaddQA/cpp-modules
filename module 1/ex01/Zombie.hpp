@@ -2,7 +2,6 @@
 #define ZOMBIE_HPP
 
 #include <string>
-#include <iostream>
 
 class Zombie
 {
@@ -11,12 +10,14 @@ private:
 
 public:
     // Default constructor
-    Zombie(void) { this->name = ""; }
+    Zombie(void);
     // Parameterized constructor (Must be explicitly called)
-    Zombie(std::string name) { this->name = name; }
+    Zombie(std::string name);
     void setName(std::string name);
     ~Zombie();
     void announce(void);
 };
+
+Zombie *zombieHorde(int N, std::string name);
 
 #endif
