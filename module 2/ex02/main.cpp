@@ -1,7 +1,7 @@
 #include "Fixed.hpp"
 #include <iostream>
 
-int main()
+int main(void)
 {
     // The subject's example.
     Fixed a;

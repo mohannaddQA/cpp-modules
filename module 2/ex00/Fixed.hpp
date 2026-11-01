@@ -8,14 +8,14 @@ private:
     static const int _bits = 8; // the fractional part bits number (where is the point)
 
 public:
-    Fixed();
+    Fixed(void);
     // this is called a copy constructor. 
     Fixed(Fixed const &other);
     // Used by a = b: copies b raw value into existing a and returns a by reference.
     Fixed &operator=(Fixed const &other);
-    ~Fixed();
+    ~Fixed(void);
 
-    int getRawBits() const;
+    int getRawBits(void) const;
     void setRawBits(int const raw);
 };
 

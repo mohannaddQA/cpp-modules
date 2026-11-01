@@ -2,7 +2,7 @@
 #include <cmath>
 #include <iostream>
 
-Fixed::Fixed()
+Fixed::Fixed(void)
 {
     _rawBits = 0;
     std::cout << "Default constructor called" << std::endl;
@@ -37,12 +37,12 @@ Fixed &Fixed::operator=(Fixed const &other)
     return *this;
 }
 
-Fixed::~Fixed()
+Fixed::~Fixed(void)
 {
     std::cout << "Destructor called" << std::endl;
 }
 
-int Fixed::getRawBits() const
+int Fixed::getRawBits(void) const
 {
     std::cout << "getRawBits member function called" << std::endl;
     return _rawBits;
@@ -54,13 +54,13 @@ void Fixed::setRawBits(int const raw)
     _rawBits = raw;
 }
 
-float Fixed::toFloat() const
+float Fixed::toFloat(void) const
 {
     // Floating-point division preserves the fractional part.
     return static_cast<float>(_rawBits) / (1 << _bits);
 }
 
-int Fixed::toInt() const
+int Fixed::toInt(void) const
 {
     // Integer division discards the fractional part toward zero.
     return _rawBits / (1 << _bits);

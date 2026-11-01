@@ -10,18 +10,18 @@ private:
     static const int _bits = 8;
 
 public:
-    Fixed();
+    Fixed(void);
     Fixed(int const value);
     Fixed(float const value);
     Fixed(Fixed const &other);
     Fixed &operator=(Fixed const &other);
-    ~Fixed();
+    ~Fixed(void);
 
-    int getRawBits() const;
+    int getRawBits(void) const;
     void setRawBits(int const raw);
 
-    float toFloat() const;
-    int toInt() const;
+    float toFloat(void) const;
+    int toInt(void) const;
 };
 
 std::ostream &operator<<(std::ostream &out, Fixed const &value);

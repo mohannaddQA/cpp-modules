@@ -1,7 +1,7 @@
 #include "Fixed.hpp"
 #include <cmath>
 
-Fixed::Fixed()
+Fixed::Fixed(void)
 {
     _rawBits = 0;
 }
@@ -27,11 +27,11 @@ Fixed &Fixed::operator=(Fixed const &other)
     return *this;
 }
 
-Fixed::~Fixed()
+Fixed::~Fixed(void)
 {
 }
 
-int Fixed::getRawBits() const
+int Fixed::getRawBits(void) const
 {
     return _rawBits;
 }
@@ -41,12 +41,12 @@ void Fixed::setRawBits(int const raw)
     _rawBits = raw;
 }
 
-float Fixed::toFloat() const
+float Fixed::toFloat(void) const
 {
     return static_cast<float>(_rawBits) / (1 << _bits);
 }
 
-int Fixed::toInt() const
+int Fixed::toInt(void) const
 {
     return _rawBits / (1 << _bits);
 }
@@ -114,7 +114,7 @@ Fixed Fixed::operator/(Fixed const &other) const
 }
 
 // Update then return a reference to the obj
-Fixed &Fixed::operator++()
+Fixed &Fixed::operator++(void)
 {
     ++_rawBits;
     return *this;
@@ -128,7 +128,7 @@ Fixed Fixed::operator++(int)
     return previous;
 }
 
-Fixed &Fixed::operator--()
+Fixed &Fixed::operator--(void)
 {
     --_rawBits;
     return *this;

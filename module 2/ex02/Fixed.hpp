@@ -10,17 +10,17 @@ private:
     static const int _bits = 8;
 
 public:
-    Fixed();
+    Fixed(void);
     Fixed(int const value);
     Fixed(float const value);
     Fixed(Fixed const &other);
     Fixed &operator=(Fixed const &other);
-    ~Fixed();
+    ~Fixed(void);
 
-    int getRawBits() const;
+    int getRawBits(void) const;
     void setRawBits(int const raw);
-    float toFloat() const;
-    int toInt() const;
+    float toFloat(void) const;
+    int toInt(void) const;
 
     bool operator>(Fixed const &other) const;
     bool operator<(Fixed const &other) const;
@@ -34,9 +34,9 @@ public:
     Fixed operator*(Fixed const &other) const;
     Fixed operator/(Fixed const &other) const;
 
-    Fixed &operator++();
+    Fixed &operator++(void);
     Fixed operator++(int);
-    Fixed &operator--();
+    Fixed &operator--(void);
     Fixed operator--(int);
 
     static Fixed &min(Fixed &a, Fixed &b);
